@@ -19,11 +19,6 @@ body {
     padding: 10px;
 }
 
-
-/* #nav, #content, #supporting, #banner{
-    padding:5px;
-} */
-
 #banner {
     width: 1200px;
     background-color: royalblue;
@@ -76,7 +71,7 @@ body {
     padding: 2px;
     margin: 5px;
     text-align: center;
-    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
     border: 2px solid white;
     border-radius: 20px;
 }
@@ -103,15 +98,9 @@ body {
 
 div.gallery {
     margin: 5px;
-    /* border: 1px solid #ccc; */
     float: left;
     width: 180px;
 }
-
-
-/* div.gallery:hover {
-    border: 1px solid #777;
-} */
 
 div.gallery img {
     width: 180px;
