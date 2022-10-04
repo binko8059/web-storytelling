@@ -8,3 +8,8 @@
     text-align: center;
     color: white;
 }
+
+#achievements-item {
+    border: 3px;
+    border-color: black;
+}
