@@ -9,7 +9,11 @@
     color: white;
 }
 
-#achievements-item {
-    border: 3px;
-    border-color: black;
+.biography-item {
+    padding: 20px;
+}
+
+.achievements-item {
+    border: 2px black solid;
+    padding: 20px;
 }
