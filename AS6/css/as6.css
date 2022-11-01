@@ -7,3 +7,10 @@
     z-index: -1;
     top: -20vh;
 }
+
+h3 {
+    position: relative;
+    top: 50vh;
+    left: 20vw;
+    background-color: white;
+}
