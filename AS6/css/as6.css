@@ -1,11 +1,11 @@
 #video {
     position: fixed;
     min-width: 100%;
-    min-height: 100%;
+    min-height: 80%;
     width: max-content;
     height: max-content;
     z-index: -1;
-    top: -20vh;
+    top: -35vh;
 }
 
 h4 {
