@@ -112,7 +112,7 @@
                 <video id="video1" src="assets/macau_timeplace.mp4" style="width:100vw"></video>
             </div>
         </div>
-        <div style="height:100vh;background:grey;">The end</div>
+        <div style="height:100vh;background:grey;"> An ending div with 100vw</div>
 
 
 
@@ -156,8 +156,11 @@
                             $("#video1").addClass("played");
                         });
                     }
-                    if (scrolled < video1_pos) {
-                        $("#video1").removeClass("played");
+                    if (scrolled == 0 && video1.hasClass("played")) {
+                        video1.removeClass("played");
+                        video1.on("end", function() {
+                            video1.currentTime = 0;
+                        });
                     }
 
 
