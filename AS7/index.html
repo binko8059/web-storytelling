@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/as7.css">
+
+    <title>AS7</title>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid" style="height:100vh;background:rgb(247, 247, 220);color: rgb(46, 46, 46);text-align: center;">
+        <div class="container" style="height: 100vh; width:100%">
+            <h1 class="display-5">A leading div with 100vw</h1>
+        </div>
+
+        <div style="text-align: center;">sticky-top</div>
+        <div id="banner" style="height:800vh;">
+            <div style="height: 100vh;"> </div>
+            <div style="height:700vh">
+                <div class="container-fluid  sticky-top" style="height:50vh">
+                    <div class="row">
+                        <div class="col cloud" style="height:30vh;opacity:0.8 ;z-index:9; width:100% ">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid  sticky-top" style="height:50vh">
+                    <div class="row">
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col cloud" style="height:30vh;opacity:0.8 ;z-index:9; width:100% ">
+                        </div>
+                        <div class="col">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid  sticky-top" style="height:50vh">
+                    <div class="row">
+                        <div class="col">
+                        </div>
+                        <div class="col cloud" style="height:30vh;opacity:0.8 ;z-index:9; width:100% ">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid  sticky-top" style="height:50vh">
+                    <div class="row">
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col">
+                        </div>
+                        <div class="col cloud" style="height:30vh;opacity:0.8 ;z-index:9; width:100% ">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="height:30vh;background-color: rgb(0, 0, 0);opacity:0.05
+                 ;z-index:29; width:100% "></div>
+                <div style="height:30vh;background-color: rgb(0, 0, 0);opacity:0.1
+                 ;z-index:39; width:100% "></div>
+                <div style="height:30vh;background-color: rgb(0, 0, 0);opacity:0.15
+                             ;z-index:49; width:100% "></div>
+                <div style="height:50vh;background-color: rgb(0, 0, 0);opacity:0.2
+                                         ;z-index:59; width:100% "></div>
+
+                <div class="sticky-top rain" style="height: 100vh;opacity:0.2"> </div>
+
+
+            </div>
+
+        </div>
+
+        <div style="height:100vh;text-align: center;">
+            <p>scrollable-image</p>
+            <p>A middle div with 100vw</p>
+        </div>
+        <div id="hframe" style="height:1000vh">
+            <div class="sticky-top">
+                <div id="horizontal">
+                    <img src="https://images.unsplash.com/photo-1513735539099-cf6e5d559d82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80" style="height:100vh;width:auto" />
+                </div>
+            </div>
+        </div>
+
+
+
+        <div style="height:100vh;;text-align: center;">
+            <p>捲軸影片</p>
+            <p>Another middle div with 100vw</p>
+        </div>
+
+        <div id="v1frame" style="height:1200vh;">
+            <div class="sticky-top">
+                <video id="video1" src="assets/macau_timeplace.mp4" style="width:100vw"></video>
+            </div>
+        </div>
+        <div style="height:100vh;background:grey;">The end</div>
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
+
+        <script>
+            $(document).ready(function() {
+                var max_scroll = $(document).height() - $(window).height();
+                var max_w = $("#horizontal").width() - $(window).width();
+
+                var video1_pos = $("#video1").offset().top;
+                var video1_end = $("#video1").offset().top + $("#v1frame").height();
+
+                $(window).on("resize", function() {
+                    winh = $(window).height();
+                    max_scroll = $(document).height() - $(window).height();
+                    max_w = $("#horizontal").width() - $(window).width();
+                });
+                $(window).scroll(function() {
+                    var current_pos = $(window).scrollTop();
+                    console.log(current_pos);
+
+                    var new_left = (-1 * max_w * current_pos) / max_scroll;
+                    $("#horizontal").css({
+                        left: new_left
+                    });
+
+                    var scrolled = $(window).scrollTop();
+                    if (
+                        scrolled > video1_pos &&
+                        scrolled < video1_end &&
+                        !$("#video1").hasClass("played")
+                    ) {
+                        $("#video1")[0].play();
+                        $("#video1").on("ended", function() {
+                            $("#video1").addClass("played");
+                        });
+                    }
+                    if (scrolled < video1_pos) {
+                        $("#video1").removeClass("played");
+                    }
+
+
+                });
+            });
+        </script>
+
+</body>
+
+</html>
