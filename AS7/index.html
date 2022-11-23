@@ -128,8 +128,7 @@
                 var max_scroll = $(document).height() - $(window).height();
                 var max_w = $("#horizontal").width() - $(window).width();
 
-                var video1_pos = $("#video1").offset().top;
-                var video1_end = $("#video1").offset().top + $("#v1frame").height();
+                var max_scroll = $(document).height() - $(window).height();
 
                 $(window).on("resize", function() {
                     winh = $(window).height();
@@ -145,23 +144,10 @@
                         left: new_left
                     });
 
-                    var scrolled = $(window).scrollTop();
-                    if (
-                        scrolled > video1_pos &&
-                        scrolled < video1_end &&
-                        !$("#video1").hasClass("played")
-                    ) {
-                        $("#video1")[0].play();
-                        $("#video1").on("ended", function() {
-                            $("#video1").addClass("played");
-                        });
-                    }
-                    if (scrolled == 0 && video1.hasClass("played")) {
-                        video1.removeClass("played");
-                        video1.on("end", function() {
-                            video1.currentTime = 0;
-                        });
-                    }
+                    var video = $("#video1").get(0),
+                        videoLength = video.duration,
+                        current_pos = $(document).scrollTop();
+                    video.currentTime = videoLength * (current_pos / max_scroll);
 
 
                 });
